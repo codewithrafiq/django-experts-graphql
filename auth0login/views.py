@@ -13,9 +13,9 @@ from django.http import HttpResponseRedirect
 def index(request):
     user = request.user
     if user.is_authenticated:
-        return redirect("/home/")
+        return redirect("/h/")
     else:
-        return render(request, "Login.html")
+        return redirect("/login/")
 
 
 def logout(request):
@@ -25,9 +25,3 @@ def logout(request):
         settings.SOCIAL_AUTH_AUTH0_DOMAIN, settings.SOCIAL_AUTH_AUTH0_KEY, return_to,
     )
     return HttpResponseRedirect(logout_url)
-
-
-class PostListView(View):
-    def get(self, request):
-        context = {}
-        return render(request, "index.html", context)

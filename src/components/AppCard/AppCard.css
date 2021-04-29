@@ -1,0 +1,21 @@
+.app-card-component {
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.app-card-top-section {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-launch-button {
+  border: 1px solid black;
+  font-weight: 500;
+}
+.app-card-component p {
+  margin: 0;
+  font-size: 14px;
+}

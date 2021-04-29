@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'social_django',
     'auth0login',
     "sslserver",
-    'todo',
-    "graphene_django"
+    "graphene_django",
+    'mainapp'
 ]
 
 MIDDLEWARE = [
@@ -90,7 +90,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+# DATABASES = {
+#     'default': {
+#         # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'gqapi-db',
+#         'USER': 'expert_admin',
+#         'PASSWORD': 'Aw4$esAXdr%900PostGre',
+#         'HOST': 'gqapi-db.cmozh9d0esli.us-east-1.rds.amazonaws.com',
+#         'PORT': 5432,
+#         'CONN_MAX_AGE': None,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -178,7 +189,7 @@ GRAPHENE = {
         'graphql_jwt.middleware.JSONWebTokenMiddleware',
     ],
 }
-LOGIN_URL = "/login/auth0/"
-# LOGIN_URL = "/login/"
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/api/login/"
+# LOGIN_URL = "/login/auth0/"
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/h/"
+LOGOUT_REDIRECT_URL = "/login/"

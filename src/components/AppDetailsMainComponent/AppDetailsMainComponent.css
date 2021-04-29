@@ -1,0 +1,15 @@
+.app-details-page-main-component {
+  margin: 10px 10px 10px 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.app-details-page-main-component-left-section {
+  display: flex;
+  justify-content: center;
+}
+.app-details-page-main-component-right-section {
+  border-left: 1px solid black;
+}
+.app-details-page-main-component-heading {
+  margin-top: 20px;
+}

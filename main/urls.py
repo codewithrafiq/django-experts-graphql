@@ -10,18 +10,18 @@ from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/login/',
+    path('login/',
          auth_views.LoginView.as_view(template_name="Login.html"), name='login'),
     path("", include('auth0login.urls')),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
-    path('home/', include('todo.urls')),
-
+    path('h/', include('mainapp.urls')),
 ]
 
 # urlpatterns += [
-
 #     re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 # ]
+
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)

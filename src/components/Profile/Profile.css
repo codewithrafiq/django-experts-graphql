@@ -1,0 +1,13 @@
+.profile-component {
+  padding: 50px;
+}
+.profile-component-header,
+.profile-component-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-component-homepage-link {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,6 @@
+.main-component-body-component {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

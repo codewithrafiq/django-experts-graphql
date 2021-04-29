@@ -1,0 +1,15 @@
+.homepage-main-component {
+  margin: 10px 10px 10px 200px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.homepage-main-component-left-section {
+  display: flex;
+  justify-content: center;
+}
+.homepage-main-component-right-section {
+  border-left: 1px solid black;
+}
+.main-component-heading {
+  margin-top: 20px;
+}

@@ -1,0 +1,14 @@
+.main-component-menu-component {
+  margin-bottom: 50px;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+.new-app-button {
+  margin-right: 50px;
+  border: 1px solid black;
+}
+.profile-button {
+  border: 1px solid black;
+  width: 150px;
+}
