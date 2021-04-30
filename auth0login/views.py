@@ -13,7 +13,7 @@ from django.http import HttpResponseRedirect
 def index(request):
     user = request.user
     if user.is_authenticated:
-        return redirect("/h/")
+        return redirect("/home/")
     else:
         return redirect("/login/")
 

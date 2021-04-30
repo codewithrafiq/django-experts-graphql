@@ -7,6 +7,9 @@ const NotFound = () => {
       <h4 className="mt-5 text-center text-danger">
         The page you are looking for is not found.
       </h4>
+      <h1>
+        <a href="/home/">Go Home</a>
+      </h1>
     </div>
   );
 };

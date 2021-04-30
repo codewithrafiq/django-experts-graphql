@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!1b-8zj&he$4&n0wi11kbc%u^gb-2hhu4een8o_#*tv6$@8din'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
@@ -191,5 +192,6 @@ GRAPHENE = {
 }
 # LOGIN_URL = "/login/auth0/"
 LOGIN_URL = "/login/"
-LOGIN_REDIRECT_URL = "/h/"
-LOGOUT_REDIRECT_URL = "/login/"
+# LOGIN_REDIRECT_URL = "/h/"
+LOGIN_REDIRECT_URL = "/home/my-account"
+LOGOUT_REDIRECT_URL = "/home/"

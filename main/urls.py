@@ -6,21 +6,22 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from graphene_django.views import GraphQLView
 from django.views.decorators.csrf import csrf_exempt
-
+from django.conf.urls import url
+from mainapp.views import view_404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/',
-         auth_views.LoginView.as_view(template_name="Login.html"), name='login'),
     path("", include('auth0login.urls')),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
-    path('h/', include('mainapp.urls')),
+    path('home/', include('mainapp.urls')),
+    url(r'^$', view_404)
 ]
+handler404 = 'mainapp.views.view_404'
+
 
 # urlpatterns += [
 #     re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
 # ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

@@ -4,7 +4,7 @@ import { appContext } from "../../App";
 import "./MainComponentMenu.css";
 
 const MainComponentMenu = () => {
-  const { auth, newApp, setNewApp, handleNewAppData } = useContext(appContext);
+  const { newApp, setNewApp, handleNewAppData } = useContext(appContext);
   return (
     <div className="main-component-menu-component">
       <button
@@ -116,18 +116,14 @@ const MainComponentMenu = () => {
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
-            <Link className="dropdown-item" to="/my-account">
+            <Link className="dropdown-item" to="/home/my-account">
               Account
             </Link>
           </li>
           <li>
-            <Link
-              className="dropdown-item"
-              to="/"
-              onClick={auth.isAuthenticated() ? auth.logout : auth.login}
-            >
-              {auth.isAuthenticated() ? "Log out" : "Log in"}
-            </Link>
+            <a className="dropdown-item" href="/login/auth0">
+              Login
+            </a>
           </li>
           <li>
             <Link className="dropdown-item" to="#billing">
