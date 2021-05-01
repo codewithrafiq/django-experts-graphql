@@ -13,8 +13,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('auth0login.urls')),
     path("graphql", csrf_exempt(GraphQLView.as_view(graphiql=True))),
-    path('home/', include('mainapp.urls')),
-    url(r'^$', view_404)
+    # path('home/', include('mainapp.urls')),
+    # url(r'^$', view_404)
+    url(r'^$', TemplateView.as_view(template_name='index.html'))
 ]
 handler404 = 'mainapp.views.view_404'
 

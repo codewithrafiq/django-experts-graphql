@@ -116,7 +116,7 @@ const MainComponentMenu = () => {
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
-            <Link className="dropdown-item" to="/home/my-account">
+            <Link className="dropdown-item" to="/my-account">
               Account
             </Link>
           </li>

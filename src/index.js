@@ -44,7 +44,7 @@ const devClient = new ApolloClient({
 // Dev inverments
 // Dev inverments
 ReactDOM.render(
-  <ApolloProvider client={devClient}>
+  <ApolloProvider client={client}>
     <React.StrictMode>
       <Router>
         <App />

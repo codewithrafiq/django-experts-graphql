@@ -39,13 +39,13 @@ function App() {
         }}
       >
         <Switch>
-          <Route exact path="/home/">
+          <Route exact path="/">
             <HomePage />
           </Route>
           <Route path="/app-details">
             <AppDetailsPage />
           </Route>
-          <Route exact path="/home/my-account" component={MyAccounts} />
+          <Route exact path="/my-account" component={MyAccounts} />
           <Route path="*">
             <NotFound></NotFound>
           </Route>

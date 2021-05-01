@@ -6,4 +6,5 @@ from django.template import RequestContext
 
 
 def view_404(request, exception=None):
-    return redirect('/home/')
+    # return redirect('/')
+    return render(request, 'index.html')

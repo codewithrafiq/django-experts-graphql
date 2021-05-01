@@ -193,5 +193,5 @@ GRAPHENE = {
 # LOGIN_URL = "/login/auth0/"
 LOGIN_URL = "/login/"
 # LOGIN_REDIRECT_URL = "/h/"
-LOGIN_REDIRECT_URL = "/home/my-account"
-LOGOUT_REDIRECT_URL = "/home/"
+LOGIN_REDIRECT_URL = "/my-account"
+LOGOUT_REDIRECT_URL = "/"
