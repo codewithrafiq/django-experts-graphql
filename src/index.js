@@ -6,15 +6,45 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import {
+  ApolloClient,
+  createHttpLink,
+  InMemoryCache,
+  ApolloProvider,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context"; // Dev inverments
 
 const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
+// Dev inverments
+// Dev inverments
+// Dev inverments
+const httpLink = createHttpLink({
+  uri: "https://0.0.0.0:8888/graphql",
+});
+const authLink = setContext((_, { headers }) => {
+  const token =
+    "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJhZmlxIiwiZXhwIjoxNjE5ODM4MjM2LCJvcmlnSWF0IjoxNjE5ODM3OTM2fQ.jz5nBhK-S31FaiN7tAuTGi6pbnPh1D3LqqpUwXZnaiM";
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `JWT ${token}` : "",
+    },
+  };
+});
+
+const devClient = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+// Dev inverments
+// Dev inverments
+// Dev inverments
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <ApolloProvider client={devClient}>
     <React.StrictMode>
       <Router>
         <App />
